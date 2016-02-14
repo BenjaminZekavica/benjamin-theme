@@ -15,7 +15,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    
     <meta name="Webdesigner und Programmierer des Themes" content="Benjamin Zekavica"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" /><meta charset="utf-8" />
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" type="<?php bloginfo('template_directory'); ?>/image/x-icon"/>
