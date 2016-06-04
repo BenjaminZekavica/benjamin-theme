@@ -28,7 +28,9 @@
         	<div class="row">
             	<div class="col-md-8 forms">
                 	<h3>Schreiben Sie mich an!&nbsp;<i class="fa fa-envelope"></i></h3>
-                    <div class="formular"><?php if (function_exists('iphorm')) echo iphorm(1); ?></div>
+                    <div class="formular">
+                    	<!-- Hier kann man seinen Shortcode hinterlegen.-->
+                    </div>
 				</div>
                 <div class="col-md-4 daten">
                 	<h3>Hier befinde ich mich&nbsp;<i class="fa fa-map-marker icon-mapstamp"></i></h3>
