@@ -20,10 +20,8 @@
     <link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" type="<?php bloginfo('template_directory'); ?>/image/x-icon"/>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700"/>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/js/animations.js"></script>
 	<?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>>
@@ -41,7 +39,7 @@
                 <div class="col-md-6">
                     <div class="top-header-rechts">
                          <div class="inhalt-header-rechts">
-                                <p>Folgen Sie mich auf: </p>
+                                <p>Folgen Sie mir: </p>
                                 <ul>
                                     <li><a href="http://www.facebook.com/benjamin.zekavica"><i class="fa fa-facebook-official 1"></i></a></li>
                                     <li><a href="https://plus.google.com/+BenjaminZekavicaAachen"><i class="fa fa-google-plus 2"></i></a></li>
