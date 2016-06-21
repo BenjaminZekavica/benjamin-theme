@@ -205,13 +205,21 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size(200, 200, true); // Normal post thumbnails
 
 // Scripte
-function animation() {
-	wp_deregister_style( 'animation' );
-	wp_register_script( 'animation', get_template_directory_uri() .'/js/animations.js', false, false, false );
-	wp_enqueue_script( 'animation' );
 
+function scripts_and_styles_register() {
+	$template_url = get_template_directory_uri();
+	wp_enqueue_script( 'jquery' );
+	wp_register_script( 'animation', $template_url .'/js/animations.js', false, false, false );
+	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
+    wp_enqueue_style( 'font-awesome-style', $template_url . '/css/font-awesome.min.css');
+
+	//Main Style
+	wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+
+	// Load Thread comments WordPress script.
+	if ( is_singular() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'animation' );
 
-
-// jQuery
+add_action( 'wp_enqueue_scripts', 'scripts_and_styles_register', 1 );
