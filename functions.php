@@ -204,12 +204,12 @@ add_theme_support( 'woocommerce' );
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size(200, 200, true); // Normal post thumbnails
 
-// Scripte
+
+// Scripte und Styles
 
 function scripts_and_styles_register() {
 	$template_url = get_template_directory_uri();
 	wp_enqueue_script( 'jquery' );
-	wp_register_script( 'animation', $template_url .'/js/animations.js', false, false, false );
 	wp_enqueue_style( 'bootstrap-style', $template_url . '/css/bootstrap.min.css' );
     wp_enqueue_style( 'font-awesome-style', $template_url . '/css/font-awesome.min.css');
 
@@ -223,3 +223,22 @@ function scripts_and_styles_register() {
 }
 
 add_action( 'wp_enqueue_scripts', 'scripts_and_styles_register', 1 );
+
+//Meta rauslöschen
+
+add_action('init', 'myoverride', 100);
+function myoverride() {
+    remove_action('wp_head', array(visual_composer(), 'addMetaData'));
+}
+
+// WordPress Version löschen
+remove_action('wp_head', 'wp_generator');
+
+//Slider Revolution
+
+function remove_revslider_meta_tag() {
+    return '';
+}
+add_filter( 'revslider_meta_generator', 'remove_revslider_meta_tag' );
+
+
