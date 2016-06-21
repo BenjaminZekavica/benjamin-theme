@@ -76,27 +76,3 @@
 		
 		
 	  }); 
-
-
-$(function(){ 
- 
-  if (!!$('aside#sidebar').offset()) { 
- 
-    var stickyTop = $('.sticky').offset().top; 
- 
-    $(window).scroll(function(){ 
- 
-      var windowTop = $(window).scrollTop(); 
- 
-      if (stickyTop < windowTop){
-        $('aside#sidebar').css({ position: 'fixed', top: 0 });
-      }
-      else {
-        $('aside#sidebar').css('position','static');
-      }
- 
-    });
- 
-  }	   
-});
-
