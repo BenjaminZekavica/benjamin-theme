@@ -4,7 +4,7 @@ Theme URI: http://www.benjamin-zekavica.de
 Author: Benjamin Zekavica
 Author URI: http://www.benjamin-zekavica.de
 Description: Mein eigenes WordPress Theme.
-Version: 1.0
+Version: 2.0
 License: Eigenentwicklung nur für die benjamin-zekavica.de Webseite.
 */
 
@@ -1320,6 +1320,10 @@ a.vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-shape-square.vc_btn3-style-outline-
 		margin-bottom: -42px;
 		
 	}
+
+.container-fluid.top-menu.sticky{
+    display:none;
+}
 	
 	.copyright {
 		color: white;
