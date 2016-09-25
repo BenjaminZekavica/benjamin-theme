@@ -1,0 +1,29 @@
+Sun, 25 Sep 2016 15:14:21 +0000
+Message: PHP warning in file /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/io/File.class.php (53): fopen(/homepages/36/d590633150/htdocs/gamesary/forum/wcf/tmp/atomic_5a86b42b4ac59fbdb51622bab656513227b9f460): failed to open stream: Disk quota exceeded
+File: /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/WCF.class.php (309)
+PHP version: 5.6.26
+WCF version: 2.1.11 (Typhoon)
+Request URI: /forum/
+Referrer: 
+User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36
+Information: ""
+Stacktrace: 
+  #0 [internal function]: wcf\system\WCF::handleError(2, 'fopen(/homepage...', '/homepages/36/d...', 53, Array)
+  #1 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/io/File.class.php(53): fopen('/homepages/36/d...', 'xb')
+  #2 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/io/AtomicWriter.class.php(47): wcf\system\io\File->__construct('/homepages/36/d...', 'xb')
+  #3 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/cache/source/DiskCacheSource.class.php(71): wcf\system\io\AtomicWriter->__construct('/homepages/36/d...')
+  #4 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/cache/CacheHandler.class.php(88): wcf\system\cache\source\DiskCacheSource->set('wbb_BoardData', Array, 300)
+  #5 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/cache/builder/AbstractCacheBuilder.class.php(43): wcf\system\cache\CacheHandler->set(Object(wbb\system\cache\builder\BoardDataCacheBuilder), Array, Array)
+  #6 /homepages/36/d590633150/htdocs/gamesary/forum/lib/data/board/BoardCache.class.php(104): wcf\system\cache\builder\AbstractCacheBuilder->getData(Array, 'counts')
+  #7 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/SingletonFactory.class.php(27): wbb\data\board\BoardCache->init()
+  #8 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/SingletonFactory.class.php(56): wcf\system\SingletonFactory->__construct()
+  #9 /homepages/36/d590633150/htdocs/gamesary/forum/lib/data/board/BoardNodeTree.class.php(79): wcf\system\SingletonFactory::getInstance()
+  #10 /homepages/36/d590633150/htdocs/gamesary/forum/lib/data/board/BoardNodeTree.class.php(64): wbb\data\board\BoardNodeTree->generateNodeTree(NULL, Object(wbb\data\board\BoardNode), Array)
+  #11 /homepages/36/d590633150/htdocs/gamesary/forum/lib/page/BoardListPage.class.php(62): wbb\data\board\BoardNodeTree->readNodeTree()
+  #12 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/page/AbstractPage.class.php(273): wbb\page\BoardListPage->readData()
+  #13 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/page/AbstractPage.class.php(100): wcf\page\AbstractPage->show()
+  #14 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/request/Request.class.php(58): wcf\page\AbstractPage->__run()
+  #15 /homepages/36/d590633150/htdocs/gamesary/forum/wcf/lib/system/request/RequestHandler.class.php(139): wcf\system\request\Request->execute()
+  #16 /homepages/36/d590633150/htdocs/gamesary/forum/index.php(10): wcf\system\request\RequestHandler->handle('wbb')
+  #17 {main}
+<<<<
