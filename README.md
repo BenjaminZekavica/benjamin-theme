@@ -1,4 +1,4 @@
-# benjaminzekavica
+# Theme Benjamin Zekavica (Bitte nicht verwenden, Theme ist fehlerhaft1
 Mein Theme zu meiner jetzigen Webseite
 
 Copyright Hinweis: Dieses Theme darf weder verkäuft werden weder auf andere Plattformen hochgeladen werden.
